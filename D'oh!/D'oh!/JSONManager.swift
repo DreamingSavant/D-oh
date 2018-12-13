@@ -22,7 +22,8 @@ class JSONManager {
             
             for character in characters {
                 let imageDict = character["Icon"] as! [String:String]
-                let imageURL = imageDict["URL"]!
+                let imageURL = imageDict["URL"]! as String
+                print(imageURL)
                 let text = character["Text"] as! String
                 //split text up into name and desc, respectively
                 let separated = text.components(separatedBy: " - ")
@@ -51,16 +52,20 @@ class JSONManager {
     func downloadImage(_ urlString: String,
                        completion: @escaping (Data)->()) {
         
-        let filePath = Bundle.main.path(forResource: "doh", ofType: "png")
-        let url = URL(string: urlString) ?? URL.init(fileURLWithPath: filePath!)
-        
-        let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//        let filePath = Bundle.main.path(forResource: "doh", ofType: "png")
+        var url = URL(string: urlString) //?? URL.init(fileURLWithPath: filePath!)
+        if url == nil {
+            url = URL(string:"https://cdn.friendlystock.com/wp-content/uploads/2018/03/donald-trump-thumbs-up.jpg")
+        }
+        let dataTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            
             if let safeData = data {
                 //print("Did receive image data")
                 completion(safeData)
             }
+            
         }
-        
+        print(dataTask)
         dataTask.resume()
         
     }}

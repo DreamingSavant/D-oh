@@ -38,7 +38,6 @@ class SimpsonsTableViewController: UIViewController {
              print("Dispatched work to the main thread")
         }
         self.manager.downloadSimpsons(completion: completion)
-        
     }
 
     override func didReceiveMemoryWarning() {

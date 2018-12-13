@@ -19,6 +19,9 @@
 		0739017121C0C51E0007C393 /* doh.png in Resources */ = {isa = PBXBuildFile; fileRef = 0739017021C0C51E0007C393 /* doh.png */; };
 		0739017821C0C71E0007C393 /* Simpsons+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739017621C0C71E0007C393 /* Simpsons+CoreDataClass.swift */; };
 		0739017921C0C71E0007C393 /* Simpsons+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739017721C0C71E0007C393 /* Simpsons+CoreDataProperties.swift */; };
+		0739017D21C1CE270007C393 /* SimpsonsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739017C21C1CE270007C393 /* SimpsonsCollectionViewController.swift */; };
+		0739018121C1EB990007C393 /* SimpsonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739017F21C1EB990007C393 /* SimpsonsCollectionViewCell.swift */; };
+		0739018221C1EB990007C393 /* SimpsonsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0739018021C1EB990007C393 /* SimpsonsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		0739017021C0C51E0007C393 /* doh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doh.png; sourceTree = "<group>"; };
 		0739017621C0C71E0007C393 /* Simpsons+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Simpsons+CoreDataClass.swift"; path = "../Simpsons+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0739017721C0C71E0007C393 /* Simpsons+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Simpsons+CoreDataProperties.swift"; path = "../Simpsons+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0739017C21C1CE270007C393 /* SimpsonsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpsonsCollectionViewController.swift; sourceTree = "<group>"; };
+		0739017F21C1EB990007C393 /* SimpsonsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpsonsCollectionViewCell.swift; sourceTree = "<group>"; };
+		0739018021C1EB990007C393 /* SimpsonsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpsonsCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 				0734062921BC5E9E003D00D6 /* Json & CoreData */,
 				0739011C21BCB7F30007C393 /* Model */,
 				0739011F21BD91890007C393 /* ViewControllers */,
+				0739017E21C1EB750007C393 /* VC Nibs */,
 				0734061221BB5D61003D00D6 /* AppDelegate.swift */,
 				0734061621BB5D61003D00D6 /* Main.storyboard */,
 				0734061C21BB5D61003D00D6 /* Assets.xcassets */,
@@ -105,8 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				0734061421BB5D61003D00D6 /* SimpsonsTableViewController.swift */,
+				0739017C21C1CE270007C393 /* SimpsonsCollectionViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0739017E21C1EB750007C393 /* VC Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				0739017F21C1EB990007C393 /* SimpsonsCollectionViewCell.swift */,
+				0739018021C1EB990007C393 /* SimpsonsCollectionViewCell.xib */,
+			);
+			name = "VC Nibs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +190,7 @@
 				0739017121C0C51E0007C393 /* doh.png in Resources */,
 				0734061D21BB5D61003D00D6 /* Assets.xcassets in Resources */,
 				0734061821BB5D61003D00D6 /* Main.storyboard in Resources */,
+				0739018221C1EB990007C393 /* SimpsonsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0739018121C1EB990007C393 /* SimpsonsCollectionViewCell.swift in Sources */,
 				0739017821C0C71E0007C393 /* Simpsons+CoreDataClass.swift in Sources */,
 				0739017921C0C71E0007C393 /* Simpsons+CoreDataProperties.swift in Sources */,
 				0739012821BDEAFA0007C393 /* JSONManager.swift in Sources */,
@@ -190,6 +209,7 @@
 				0734061521BB5D61003D00D6 /* SimpsonsTableViewController.swift in Sources */,
 				0734061321BB5D61003D00D6 /* AppDelegate.swift in Sources */,
 				0739011E21BCB8080007C393 /* CharactersInfo.swift in Sources */,
+				0739017D21C1CE270007C393 /* SimpsonsCollectionViewController.swift in Sources */,
 				0739012A21BDEB0A0007C393 /* PersistanceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
