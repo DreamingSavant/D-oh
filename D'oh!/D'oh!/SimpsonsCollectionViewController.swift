@@ -20,9 +20,6 @@ class SimpsonsCollectionViewController: UIViewController {
    
     @IBOutlet weak var collectionView: UICollectionView!
    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadSimpson()
@@ -31,12 +28,7 @@ class SimpsonsCollectionViewController: UIViewController {
         self.collectionView!.dataSource = self
         self.collectionView.delegate = self
         
-        // Register cell classes
-
-
         // Do any additional setup after loading the view.
-        
-        
         let cellNib = UINib(nibName: "SimpsonsCollectionViewCell", bundle: nil)
         self.collectionView?.register(cellNib, forCellWithReuseIdentifier: cellIdentifier)
     }
@@ -104,9 +96,50 @@ class SimpsonsCollectionViewController: UIViewController {
     }
 
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let simpsonSelected = simpson[indexPath.item]
             print("Yo!")
+            performSegue(withIdentifier: "DetailVC", sender: simpsonSelected)
         }
         
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "DetailVC" {
+                
+                print("preparing for DetailVC segue")
+            if let character = sender as? Simpsons {
+                
+                print("passing over data")
+                
+                let vc = segue.destination as! SimpsonsDetailViewController
+                if let nameData = character.name {
+                    vc.nameLabel = nameData
+                }
+                if let bioData = character.bio {
+                    vc.bioLabel = bioData
+                }
+                if let imageData = character.characterImage {
+                    vc.imageLabel = UIImage(data: imageData as Data)
+                }
+//                vc.nameLabel = simpson[indexPath.item].name
+                
+                }
+            }
+            //            if segue.identifier == "DetailVC" {
+            //                print("First step accomplished!")
+            //                let vc = segue.destination as! SimpsonsDetailViewController
+            //                if let selectedItemIndex = self.collectionView.indexPathsForSelectedItems {
+            //                    if let nameData = simpson.selectedItemIndex.name {
+            //                        vc.nameLabel = nameData
+            //                        print("Data has been passed!")
+            //                    }
+            //                    if let bioData = simpson[selectedItemIndex].bio {
+            //                        vc.bioLabel = bioData
+            //                        print("Bio has been passed!")
+            //                    }
+            //                    if let imageData = simpson[selectedItemIndex].characterImage {
+            //                        vc.imageLabel = UIImage(data: imageData as Data)
+            //                    }
+            
+        }
     
     // MARK: UICollectionViewDelegate
 
@@ -117,12 +150,12 @@ class SimpsonsCollectionViewController: UIViewController {
     }
     */
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
+//    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+        
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

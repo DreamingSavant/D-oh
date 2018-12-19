@@ -259,6 +259,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="3LL-87-IVJ" kind="show" identifier="DetailVC" id="fJU-vj-YBg"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -294,4 +297,7 @@
     <resources>
         <image name="The-Simpsons-Blue-Sky.png" width="1883" height="947"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fJU-vj-YBg"/>
+    </inferredMetricsTieBreakers>
 </document>
