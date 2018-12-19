@@ -19,12 +19,12 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageView" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-iG-1nS">
-                        <rect key="frame" x="0.0" y="0.0" width="202" height="163"/>
+                        <rect key="frame" x="0.0" y="19" width="202" height="144"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="YZY-iG-1nS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6OX-t5-ziR"/>
+                <constraint firstItem="YZY-iG-1nS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="19" id="6OX-t5-ziR"/>
                 <constraint firstAttribute="trailing" secondItem="YZY-iG-1nS" secondAttribute="trailing" id="QZS-Os-Bwh"/>
                 <constraint firstItem="YZY-iG-1nS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dfG-5N-haM"/>
                 <constraint firstAttribute="bottom" secondItem="YZY-iG-1nS" secondAttribute="bottom" id="iSQ-cC-ccq"/>
@@ -33,7 +33,7 @@
             <connections>
                 <outlet property="imageView" destination="YZY-iG-1nS" id="Yk9-hb-mAq"/>
             </connections>
-            <point key="canvasLocation" x="169" y="9"/>
+            <point key="canvasLocation" x="169" y="8.5"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -55,7 +55,7 @@ class JSONManager {
 //        let filePath = Bundle.main.path(forResource: "doh", ofType: "png")
         var url = URL(string: urlString) //?? URL.init(fileURLWithPath: filePath!)
         if url == nil {
-            url = URL(string:"https://cdn.friendlystock.com/wp-content/uploads/2018/03/donald-trump-thumbs-up.jpg")
+            url = URL(string:"https://vignette.wikia.nocookie.net/simpsons/images/f/f3/Thomas_Pynchon.png/revision/latest?cb=20130718201352")
         }
         let dataTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             

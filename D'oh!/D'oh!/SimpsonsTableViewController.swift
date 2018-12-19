@@ -11,7 +11,7 @@ import UIKit
 class SimpsonsTableViewController: UIViewController {
     lazy var manager = JSONManager()
     var simpson = [Simpsons]()
-
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,7 +21,7 @@ class SimpsonsTableViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.tableView.dataSource = self
-//        self.tableView.delegate = self
+        self.tableView.delegate = self
         
 //        self.manager.downloadSimpsons()
         downloadSimpson()
@@ -62,12 +62,45 @@ extension SimpsonsTableViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        
             cell.textLabel?.text = simpson[indexPath.row].name!
-        
-
+            cell.textLabel?.textColor = UIColor.yellow
+            cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 15)
         return cell
     }
     
     
+}
+
+extension SimpsonsTableViewController: UITableViewDelegate {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailVC" {
+            print("First step accomplished!")
+            let vc = segue.destination as! SimpsonsDetailViewController
+            if let selectedRowIndex = self.tableView.indexPathForSelectedRow {
+                if let nameData = simpson[selectedRowIndex.row].name {
+                    vc.nameLabel = nameData
+                    print("Data has been passed!")
+                }
+                if let bioData = simpson[selectedRowIndex.row].bio {
+                    vc.bioLabel = bioData
+                    print("Bio has been passed!")
+                }
+                if let imageData = simpson[selectedRowIndex.row].characterImage {
+                    vc.imageLabel = UIImage(data: imageData as Data)
+                }
+            
+            }
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let simpsonSelected = simpson[indexPath.row]
+        
+        performSegue(withIdentifier:"DetailVC", sender: simpsonSelected)
+        
+    }
+    
+
 }

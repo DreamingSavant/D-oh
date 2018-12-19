@@ -22,6 +22,8 @@
 		0739017D21C1CE270007C393 /* SimpsonsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739017C21C1CE270007C393 /* SimpsonsCollectionViewController.swift */; };
 		0739018121C1EB990007C393 /* SimpsonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739017F21C1EB990007C393 /* SimpsonsCollectionViewCell.swift */; };
 		0739018221C1EB990007C393 /* SimpsonsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0739018021C1EB990007C393 /* SimpsonsCollectionViewCell.xib */; };
+		07DD734D21C351EA00E5E654 /* SimpsonsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DD734C21C351EA00E5E654 /* SimpsonsDetailViewController.swift */; };
+		07EAF93B21C9DDF2008B65F8 /* The-Simpsons-Blue-Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EAF93A21C9DDF2008B65F8 /* The-Simpsons-Blue-Sky.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		0739017C21C1CE270007C393 /* SimpsonsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpsonsCollectionViewController.swift; sourceTree = "<group>"; };
 		0739017F21C1EB990007C393 /* SimpsonsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpsonsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0739018021C1EB990007C393 /* SimpsonsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpsonsCollectionViewCell.xib; sourceTree = "<group>"; };
+		07DD734C21C351EA00E5E654 /* SimpsonsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpsonsDetailViewController.swift; sourceTree = "<group>"; };
+		07EAF93A21C9DDF2008B65F8 /* The-Simpsons-Blue-Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Simpsons-Blue-Sky.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		0734061121BB5D61003D00D6 /* D'oh! */ = {
 			isa = PBXGroup;
 			children = (
+				07EAF93A21C9DDF2008B65F8 /* The-Simpsons-Blue-Sky.png */,
 				0739017021C0C51E0007C393 /* doh.png */,
 				0734062921BC5E9E003D00D6 /* Json & CoreData */,
 				0739011C21BCB7F30007C393 /* Model */,
@@ -113,6 +118,7 @@
 			children = (
 				0734061421BB5D61003D00D6 /* SimpsonsTableViewController.swift */,
 				0739017C21C1CE270007C393 /* SimpsonsCollectionViewController.swift */,
+				07DD734C21C351EA00E5E654 /* SimpsonsDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +195,7 @@
 				0734062021BB5D61003D00D6 /* LaunchScreen.storyboard in Resources */,
 				0739017121C0C51E0007C393 /* doh.png in Resources */,
 				0734061D21BB5D61003D00D6 /* Assets.xcassets in Resources */,
+				07EAF93B21C9DDF2008B65F8 /* The-Simpsons-Blue-Sky.png in Resources */,
 				0734061821BB5D61003D00D6 /* Main.storyboard in Resources */,
 				0739018221C1EB990007C393 /* SimpsonsCollectionViewCell.xib in Resources */,
 			);
@@ -204,6 +211,7 @@
 				0739018121C1EB990007C393 /* SimpsonsCollectionViewCell.swift in Sources */,
 				0739017821C0C71E0007C393 /* Simpsons+CoreDataClass.swift in Sources */,
 				0739017921C0C71E0007C393 /* Simpsons+CoreDataProperties.swift in Sources */,
+				07DD734D21C351EA00E5E654 /* SimpsonsDetailViewController.swift in Sources */,
 				0739012821BDEAFA0007C393 /* JSONManager.swift in Sources */,
 				0739014F21BF663F0007C393 /* D_oh_.xcdatamodeld in Sources */,
 				0734061521BB5D61003D00D6 /* SimpsonsTableViewController.swift in Sources */,

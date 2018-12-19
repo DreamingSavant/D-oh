@@ -29,8 +29,8 @@ class SimpsonsCollectionViewController: UIViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         self.collectionView!.dataSource = self
+        self.collectionView.delegate = self
         
-//        self.collectionView.delegate = self
         // Register cell classes
 
 
@@ -103,6 +103,11 @@ class SimpsonsCollectionViewController: UIViewController {
         return cell
     }
 
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            print("Yo!")
+        }
+        
+    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -134,4 +139,29 @@ class SimpsonsCollectionViewController: UIViewController {
     }
     */
 
+}
+
+extension SimpsonsCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenWidth = self.collectionView.frame.size.width
+        // let screenHeight = self.collectionView.frame.size.height
+        
+        return CGSize(width: screenWidth/4.0,
+                      height: screenWidth/4.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
 }
